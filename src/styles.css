@@ -1,0 +1,165 @@
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: var(--tg-text);
+  background: radial-gradient(circle at top, #eef2ff, #f8fafc 60%);
+  --tg-bg: #ffffff;
+  --tg-text: #111111;
+  --tg-hint: #6b7280;
+  --tg-link: #2563eb;
+  --tg-button: #1d4ed8;
+  --tg-button-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--tg-bg);
+}
+
+.app {
+  min-height: 100vh;
+  padding: 24px;
+  color: var(--tg-text);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid var(--tg-hint);
+  color: var(--tg-text);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--tg-button);
+  border-color: var(--tg-button);
+  color: var(--tg-button-text);
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.filters,
+.form,
+.profile {
+  display: grid;
+  gap: 12px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--tg-button);
+  color: var(--tg-button-text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--tg-hint);
+  color: var(--tg-text);
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.files {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.file-link {
+  color: var(--tg-link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.file-preview ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.progress {
+  font-size: 14px;
+  color: var(--tg-hint);
+}
+
+.card {
+  padding: 16px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.muted {
+  color: var(--tg-hint);
+}
+
+.error {
+  margin-top: 16px;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 16px;
+  }
+}
